@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cooler Than Our Kids — The Parenting Counterculture</title>
+<meta name="description" content="A tongue-in-cheek editorial for Gen X and Millennial parents who refuse to believe their best days are behind them. Retro tech, music taste defense, fashion comebacks, and nostalgic culture.">
+<meta name="keywords" content="parenting humor, Gen X parents, millennial parents, retro culture, nostalgia, cool parents, 90s culture">
+<meta property="og:title" content="Cooler Than Our Kids — The Parenting Counterculture">
+<meta property="og:description" content="A tongue-in-cheek editorial for Gen X and Millennial parents who refuse to believe their best days are behind them. Retro tech, music taste defense, fashion comebacks, and nostalgic culture.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coolerthanourkids.com">
+<link rel="canonical" href="https://coolerthanourkids.com">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --site-accent:{{site.accentColor}};
+  --accent:{{site.accentColor}};
+  --accent-light:{{site.accentLight}};
+  --accent-dark:{{site.accentDark}};
+  --bg:#0a0a0a;
+  --bg-card:#111111;
+  --bg-alt:#0e0e0e;
+  --text:#e8e8e8;
+  --text-secondary:#a0a0a0;
+  --text-muted:#666666;
+  --border:#1e1e1e;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* --- Hide emoji placeholders --- */
+.nav-logo-icon,
+.story-icon{
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
+/* --- Nav --- */
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+  background:rgba(10,10,10,0.85);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav-inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:1.25rem 2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.nav-logo{
+  color:var(--text);
+  text-decoration:none;
+  font-weight:800;
+  font-size:1.1rem;
+  letter-spacing:-0.02em;
+}
+
+.nav-links{
+  display:flex;
+  gap:2rem;
+}
+
+.nav-links a{
+  color:var(--text-muted);
+  text-decoration:none;
+  font-size:0.8rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  transition:color 0.2s;
+}
+
+.nav-links a:hover{
+  color:var(--accent);
+}
+
+/* --- Hero --- */
+.hero{
+  padding:10rem 2rem 6rem;
+  border-bottom:1px solid var(--border);
+}
+
+.hero-inner{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.hero-tagline{
+  font-size:0.75rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  color:var(--accent);
+  margin-bottom:1.5rem;
+}
+
+.hero-headline{
+  font-size:clamp(2.5rem,6vw,4.5rem);
+  font-weight:900;
+  line-height:1.05;
+  letter-spacing:-0.03em;
+  max-width:800px;
+  margin-bottom:1.5rem;
+}
+
+.hero-sub{
+  font-size:1.15rem;
+  color:var(--text-secondary);
+  max-width:550px;
+  line-height:1.7;
+}
+
+.hero-rule{
+  width:60px;
+  height:2px;
+  background:var(--accent);
+  margin-top:3rem;
+}
+
+/* --- Sections --- */
+.section-header{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 2rem;
+}
+
+.section-title{
+  font-size:0.8rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  color:var(--text-muted);
+}
+
+.section-rule{
+  width:40px;
+  height:2px;
+  background:var(--accent);
+  margin-top:1rem;
+}
+
+/* --- Stories --- */
+.stories{
+  padding:5rem 0;
+  border-bottom:1px solid var(--border);
+}
+
+.story-grid{
+  max-width:1100px;
+  margin:3rem auto 0;
+  padding:0 2rem;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--border);
+}
+
+.story-card{
+  background:var(--bg-card);
+  overflow:hidden;
+  transition:background 0.25s;
+}
+
+.story-card:hover{
+  background:#161616;
+}
+
+.story-banner{
+  height:4px;
+  position:relative;
+}
+
+.story-body{
+  padding:2rem 1.75rem 2.25rem;
+}
+
+.story-tag{
+  display:inline-block;
+  font-size:0.65rem;
+  font-weight:700;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  margin-bottom:0.75rem;
+}
+
+.story-title{
+  font-size:1.1rem;
+  font-weight:800;
+  line-height:1.3;
+  letter-spacing:-0.01em;
+  margin-bottom:0.75rem;
+}
+
+.story-excerpt{
+  font-size:0.88rem;
+  color:var(--text-secondary);
+  line-height:1.65;
+  margin-bottom:1.25rem;
+}
+
+.story-meta{
+  font-size:0.72rem;
+  color:var(--text-muted);
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+}
+
+/* --- About --- */
+.about{
+  padding:5rem 2rem;
+  border-bottom:1px solid var(--border);
+}
+
+.about-inner{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.about-content{
+  max-width:650px;
+  margin-top:2.5rem;
+  font-size:1rem;
+  color:var(--text-secondary);
+  line-height:1.8;
+}
+
+.about-content h3{
+  color:var(--text);
+  font-size:1.15rem;
+  font-weight:800;
+  margin:2rem 0 0.75rem;
+  letter-spacing:-0.01em;
+}
+
+.about-content p{
+  margin-bottom:1.25rem;
+}
+
+.about-content a{
+  color:var(--accent);
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:border-color 0.2s;
+}
+
+.about-content a:hover{
+  border-bottom-color:var(--accent);
+}
+
+/* --- Newsletter --- */
+.newsletter{
+  padding:5rem 2rem;
+  border-bottom:1px solid var(--border);
+}
+
+.newsletter-inner{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.nl-title{
+  font-size:1.6rem;
+  font-weight:900;
+  letter-spacing:-0.02em;
+  margin-bottom:0.75rem;
+}
+
+.nl-sub{
+  color:var(--text-secondary);
+  font-size:0.95rem;
+  margin-bottom:2rem;
+  max-width:450px;
+  line-height:1.6;
+}
+
+.nl-form{
+  display:flex;
+  gap:0;
+  max-width:440px;
+}
+
+.nl-form input{
+  flex:1;
+  padding:0.85rem 1rem;
+  border:1px solid var(--border);
+  border-right:none;
+  border-radius:0;
+  font-size:0.9rem;
+  background:var(--bg-card);
+  color:var(--text);
+  font-family:inherit;
+  outline:none;
+  transition:border-color 0.2s;
+}
+
+.nl-form input:focus{
+  border-color:var(--accent);
+}
+
+.nl-form button{
+  padding:0.85rem 1.75rem;
+  background:var(--accent);
+  color:#fff;
+  border:1px solid var(--accent);
+  border-radius:0;
+  font-weight:700;
+  font-size:0.8rem;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  cursor:pointer;
+  transition:background 0.2s;
+  white-space:nowrap;
+  font-family:inherit;
+}
+
+.nl-form button:hover{
+  background:var(--accent-dark);
+  border-color:var(--accent-dark);
+}
+
+/* --- Footer --- */
+.footer{
+  padding:3rem 2rem;
+}
+
+.footer-inner{
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--border);
+}
+
+.footer-logo{
+  font-weight:800;
+  font-size:1rem;
+  letter-spacing:-0.02em;
+}
+
+.footer-link{
+  color:var(--text-muted);
+  text-decoration:none;
+  font-size:0.8rem;
+  letter-spacing:0.03em;
+  transition:color 0.2s;
+}
+
+.footer-link:hover{
+  color:var(--accent);
+}
+
+.footer-bottom{
+  padding-top:1.5rem;
+}
+
+.footer-bottom p{
+  font-size:0.72rem;
+  color:var(--text-muted);
+  line-height:1.6;
+}
+
+/* --- Responsive --- */
+@media(max-width:900px){
+  .story-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .hero{
+    padding:8rem 1.25rem 4rem;
+  }
+
+  .nav-inner{
+    padding:1rem 1.25rem;
+  }
+
+  .nav-links{
+    gap:1.25rem;
+  }
+
+  .nav-links a{
+    font-size:0.72rem;
+  }
+
+  .story-grid{
+    grid-template-columns:1fr;
+    padding:0 1.25rem;
+  }
+
+  .stories{
+    padding:4rem 0;
+  }
+
+  .section-header{
+    padding:0 1.25rem;
+  }
+
+  .about{
+    padding:4rem 1.25rem;
+  }
+
+  .newsletter{
+    padding:4rem 1.25rem;
+  }
+
+  .nl-form{
+    flex-direction:column;
+  }
+
+  .nl-form input{
+    border-right:1px solid var(--border);
+    border-bottom:none;
+  }
+
+  .nl-form input:focus{
+    border-color:var(--accent);
+  }
+
+  .footer{
+    padding:2.5rem 1.25rem;
+  }
+
+  .footer-top{
+    flex-direction:column;
+    gap:1rem;
+    text-align:center;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="nav-logo-icon" aria-hidden="true">😎</span>Cooler Than Our Kids</a>
+    <div class="nav-links">
+      <a href="#stories">Stories</a>
+      <a href="#about">About</a>
+      <a href="#newsletter">Subscribe</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-tagline">PARENTING COUNTERCULTURE</div>
+    <h1 class="hero-headline">They Think We Are Embarrassing. They Are Wrong.</h1>
+    <p class="hero-sub">A magazine for parents who still own a working turntable, know every Beastie Boys lyric, and are absolutely certain that the 90s were peak civilization.</p>
+    <div class="hero-rule"></div>
+  </div>
+</header>
+
+<main>
+  <section class="stories" id="stories">
+    <div class="section-header">
+      <h2 class="section-title">Latest Dispatches</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="story-grid">
+      <div class="story-card">
+  <div class="story-banner" style="background:linear-gradient(135deg, #701a75 0%, #a21caf 50%, #d946ef 100%)"><span class="story-icon" aria-hidden="true">📼</span></div>
+  <div class="story-body">
+    <span class="story-tag">Retro Tech</span>
+    <div class="story-title">Your Kids Do Not Understand How Hard It Was to Record a Song Off the Radio</div>
+    <p class="story-excerpt">The precision timing, the DJ-dodging, the heartbreak of a late press on the record button. We had skills that no Spotify algorithm can replicate.</p>
+    <span class="story-meta">4 min read · June 2026</span>
+  </div>
+</div>
+
+<div class="story-card">
+  <div class="story-banner" style="background:linear-gradient(135deg, #831843 0%, #be185d 50%, #db2777 100%)"><span class="story-icon" aria-hidden="true">🎨</span></div>
+  <div class="story-body">
+    <span class="story-tag">Fashion Comebacks</span>
+    <div class="story-title">Everything We Wore in 1997 Is Back and We Are Not Getting Credit</div>
+    <p class="story-excerpt">Chunky sneakers, oversized flannels, tiny sunglasses. Gen Z thinks they discovered these. We have the photo albums to prove otherwise.</p>
+    <span class="story-meta">5 min read · June 2026</span>
+  </div>
+</div>
+
+<div class="story-card">
+  <div class="story-banner" style="background:linear-gradient(135deg, #1e1b4b 0%, #3730a3 50%, #6366f1 100%)"><span class="story-icon" aria-hidden="true">🎤</span></div>
+  <div class="story-body">
+    <span class="story-tag">Music Defense</span>
+    <div class="story-title">A Definitive Argument That Your Playlist Is Better Than Your Teenager's</div>
+    <p class="story-excerpt">Peer-reviewed evidence that the golden era of music ended approximately when your oldest child was born. Contains charts, graphs, and strong opinions.</p>
+    <span class="story-meta">7 min read · May 2026</span>
+  </div>
+</div>
+
+<div class="story-card">
+  <div class="story-banner" style="background:linear-gradient(135deg, #14532d 0%, #166534 50%, #16a34a 100%)"><span class="story-icon" aria-hidden="true">🕹️</span></div>
+  <div class="story-body">
+    <span class="story-tag">Gaming</span>
+    <div class="story-title">We Beat Games Without Save Points and It Built Character</div>
+    <p class="story-excerpt">Modern games have autosave, checkpoints, and difficulty sliders. We had one life, no continues, and a CRT television. Respect your elders.</p>
+    <span class="story-meta">5 min read · May 2026</span>
+  </div>
+</div>
+
+<div class="story-card">
+  <div class="story-banner" style="background:linear-gradient(135deg, #78350f 0%, #a16207 50%, #ca8a04 100%)"><span class="story-icon" aria-hidden="true">📷</span></div>
+  <div class="story-body">
+    <span class="story-tag">Nostalgia</span>
+    <div class="story-title">The Lost Art of Not Knowing Things Immediately</div>
+    <p class="story-excerpt">Before smartphones, disagreements at dinner could last for days. You had to go to the library to win an argument. It was character-building and we miss it.</p>
+    <span class="story-meta">4 min read · April 2026</span>
+  </div>
+</div>
+
+<div class="story-card">
+  <div class="story-banner" style="background:linear-gradient(135deg, #4c1d95 0%, #6d28d9 50%, #8b5cf6 100%)"><span class="story-icon" aria-hidden="true">👟</span></div>
+  <div class="story-body">
+    <span class="story-tag">Style</span>
+    <div class="story-title">Cargo Shorts: A Hill We Will Die On</div>
+    <p class="story-excerpt">They are practical. They are comfortable. They hold everything. Your children are wrong about them and history will vindicate us.</p>
+    <span class="story-meta">3 min read · April 2026</span>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-inner">
+      <h2 class="section-title">About Cooler Than Our Kids</h2>
+      <div class="section-rule"></div>
+      <div class="about-content"><h3>We Were Here First</h3><p>Cooler Than Our Kids is the editorial safe space for parents whose children have the audacity to think they invented good taste. We were wearing vintage before it was called vintage. We were streaming before there was streaming. We had playlists on cassette tapes.</p><h3>Our Sacred Mission</h3><p>To document, defend, and celebrate the cultural superiority of people who grew up rewinding VHS tapes, memorizing phone numbers, and surviving dial-up internet. Our kids may have TikTok, but we have credibility.</p><h3>Who We Are</h3><p>We are the parents who get caught dancing in the kitchen. The ones whose kids pretend not to know us at school drop-off. The ones who still think cargo shorts have utility. And we are proud.</p></div>
+    </div>
+  </section>
+
+  <section class="newsletter" id="newsletter">
+    <div class="newsletter-inner">
+      <h2 class="nl-title">Join the Cool Parents Club</h2>
+      <p class="nl-sub">Weekly proof that you are, in fact, cooler than your children. Delivered to your inbox, which you check on a computer like a civilized person.</p>
+      <form class="nl-form" id="nl-form">
+        <input type="email" placeholder="your@email.com" required aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <span class="footer-logo"><span class="nav-logo-icon" aria-hidden="true">😎</span>Cooler Than Our Kids</span>
+      <a href="https://sepehr.ai" class="footer-link" target="_blank" rel="noopener">sepehr.ai</a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Cooler Than Our Kids. No children were harmed in the making of this publication. Embarrassed, perhaps, but never harmed.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const SITE_CONFIG = {"faqs":[{"q":"Am I actually cooler than my kids?","a":"Absolutely. The data is clear. You grew up in an era of superior music, more durable fashion, and technology that required actual skill to operate. Your coolness is empirical."},{"q":"My teenager says I am embarrassing. What should I do?","a":"Lean into it. Dance in the grocery store. Sing along to the radio at pickup. Use slang from 2003. The embarrassment is a feature, not a bug. It builds their character."},{"q":"Is this site actually for parents?","a":"It is for anyone who remembers a time before smartphones and thinks that era produced objectively better humans. Parents just happen to have the most evidence, in the form of children who prove the point daily."},{"q":"Will my kids find this site?","a":"Unlikely. It is on a website, not TikTok. Your secret is safe."}],"accentColor":"#db2777","accentLight":"#f472b6","accentDark":"#be185d","ctaText":""};
+// Newsletter form
+document.getElementById('nl-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button');
+  const input = this.querySelector('input');
+  btn.textContent = 'Subscribed';
+  btn.style.background = '#22c55e';
+  btn.style.borderColor = '#22c55e';
+  input.value = '';
+  setTimeout(() => {
+    btn.textContent = 'Subscribe';
+    btn.style.background = '';
+    btn.style.borderColor = '';
+  }, 3000);
+});
+
+// Nav scroll effect
+(function() {
+  const nav = document.getElementById('nav');
+  let ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        if (window.scrollY > 40) {
+          nav.style.borderBottomColor = 'rgba(255,255,255,0.06)';
+        } else {
+          nav.style.borderBottomColor = '';
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+})();
+
+// Intersection observer for fade-in
+(function() {
+  const sections = document.querySelectorAll('.stories, .about, .newsletter');
+  sections.forEach(function(s) { s.style.opacity = '0'; s.style.transform = 'translateY(20px)'; s.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; });
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  sections.forEach(function(s) { observer.observe(s); });
+})();
+
+
+</script>
+</body>
+</html>
